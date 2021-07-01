@@ -12,17 +12,32 @@ public class PersonHandler {
 
     public String whileLoop() {
         String result = "";
+
         // create a `counter`
         // while `counter` is less than length of array
-            // begin loop
+        // begin loop
 
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
 
-            // end loop
+        Person  currentPerson;
+        Integer counter = 0;
+        while(counter < personArray.length ) {
+
+            currentPerson = personArray[counter];
+            String stringRepresentation = currentPerson.toString();
+            result +=  stringRepresentation;
+
+            counter++;
+        }
         return result;
     }
+
+
+            // use `counter` to identify the `current Person` in the array
+            // get `string Representation` of `currentPerson`
+            // append `stringRepresentation` to `result` variable
+
+            // end loop
+
 
 
 
@@ -32,15 +47,22 @@ public class PersonHandler {
         // identify terminal condition
         // identify increment
 
+        Person currentPerson;
+        for (int counter = 0; counter < personArray.length; counter++) {
+            currentPerson = personArray[counter];
+            String stringRepresentation = currentPerson.toString();
+            result += stringRepresentation;
+        }
+        return result;
+    }
+
+
         // use the above clauses to declare for-loop signature
             // begin loop
                 // use `counter` to identify the `current Person` in the array
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
-        return result;
-    }
 
 
 
@@ -54,7 +76,9 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
+        for (Person stringRepresentation : personArray) {
+            result += stringRepresentation;
+        }
         return result;
     }
 
